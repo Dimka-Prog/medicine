@@ -5,19 +5,19 @@
 
 ## Интерфейс
 ### Регистрация
-![img.png](img.png)
+![image](https://github.com/Dimka-Prog/medicine/assets/91527667/beb3016c-f852-4b7d-bbac-e55ce8f7dd96)
 ### Аутентификация
-![img_1.png](img_1.png)
+![image](https://github.com/Dimka-Prog/medicine/assets/91527667/12f44094-f8e8-4fc4-93a0-6e35c37dce21)
 ### Карточка пациента (начальное состояние)
-![img_2.png](img_2.png)
+![image](https://github.com/Dimka-Prog/medicine/assets/91527667/f64f0478-cb9b-4364-a613-403cf93ffe85)
 ### Карточка пациента (необходима коррекция лечения)
-![img_3.png](img_3.png)
+![3](https://github.com/Dimka-Prog/medicine/assets/91527667/3cf8d553-d58a-470a-8da2-92d186966b52)
 ### Карточка пациента (коррекция лечения не требуется)
-![img_4.png](img_4.png)
+![4](https://github.com/Dimka-Prog/medicine/assets/91527667/c17b1256-242e-4708-aec2-ce9bedc63731)
 ### Карточка пациента (перемещение пациента в архив)
-![img_6.png](img_6.png)
+![image](https://github.com/Dimka-Prog/medicine/assets/91527667/faaa8aa5-b9fa-4bf2-9496-94842924d8d5)
 ### Интерактивная иконка профиля
-![img_5.png](img_5.png)
+![image](https://github.com/Dimka-Prog/medicine/assets/91527667/c0e32f4d-9bbf-4b17-b112-33445c0a5d8b)
 
 ## Стек технологий
 - PHP `v8.1`
