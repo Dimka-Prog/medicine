@@ -1,8 +1,7 @@
 <?php
 
-use App\Http\Controllers\AuthorizationController;
-use App\Http\Controllers\PatientCardController;
-use Illuminate\Support\Facades\Route;
+/** @var Router $router */
+use Illuminate\Routing\Router;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,14 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::name('user.')->group(function()
-{
-    Route::match(['get', 'post'],'/patient/card', [PatientCardController::class, 'correctionTreatment'])
-        ->middleware('authCookie')
-        ->name('patientCard');
+$router->group(['prefix' => '/'], static function (Router $router) {
+    $router->get('', 'PatientCardController@index')->name('patient.card');
+    $router->post('update/{id}', 'PatientCardController@update')->name('patient.update');
+    $router->post('delete/{id}', 'PatientCardController@destroy')->name('patient.destroy');
+})->middleware('authCookie');
 
-    Route::match(['get', 'post'], '/authentication', [AuthorizationController::class, 'authentication'])->name('authentication');
+$router->group(['prefix' => '/authentication'], static function (Router $router) {
+    $router->get('', 'Auth\AuthenticationController@index')->name('auth');
+    $router->post('login', 'Auth\AuthenticationController@login')->name('auth.login');
+});
 
-    Route::match(['get', 'post'],'/registration', [AuthorizationController::class, 'registration'])->name('registration');
+$router->group(['prefix' => '/registration'], static function (Router $router) {
+    $router->get('', 'Auth\RegistrationController@index')->name('registration');
+    $router->post('register', 'Auth\RegistrationController@register')->name('registration.register');
 });
 
