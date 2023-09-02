@@ -1,0 +1,55 @@
+@media (min-width: 768px) {
+    body {
+        overflow-y: hidden;
+    }
+}
+
+.text-red {
+    color: #DC3545;
+}
+
+.active-background-red:active {
+    background-color: #DC3545;
+    color: white;
+}
+
+.hover-background-red:hover {
+    background-color: #DC3545;
+    color: white;
+}
+
+.hover-background-blue:hover {
+    background-color: #0D6EFD;
+    color: white;
+}
+
+.min-width {
+    min-width: 350px;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.max-height-250 {
+    max-height: 200px;
+}
+
+.background-dark-transparent {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+input {
+    padding: 2px 8px 0 8px;
+    border: 1px solid #999;
+    outline: none;
+    color: #444;
+}
+
+input[type="text"]:focus::placeholder {
+    color: transparent;
+}
+
+.select2-container {
+    margin-bottom: 5px;
+}
