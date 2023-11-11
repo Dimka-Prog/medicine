@@ -7,9 +7,9 @@
 @section('Authorization')
     <body class="text-center">
     <main class="container w-25 min-width">
-        <form action="{{ route('user.authentication') }}" method="POST">
+        <form action="{{ route('auth.login') }}" method="POST">
             @csrf
-            <img class="mb-4 rounded-circle" src="{{ asset('/images/doctorIcon.png') }}" alt="" width="100"
+            <img class="mb-4 rounded-circle" src="{{ asset('/images/doctorIcon.png') }}" alt="icon" width="100"
                  height="100">
             <h1 class="h3 mb-3 fw-normal text-secondary">Вход в аккаунт</h1>
 
@@ -42,9 +42,10 @@
                     <input type="checkbox" name="rememberMe" value="remember-me"> Запомнить меня
                 </label>
             </div>
-            <button type="submit" class="w-100 btn btn-lg btn-primary" name="buttonLogin">Войти</button>
-            <button type="submit" class="mt-2 w-100 btn btn-lg btn-primary" name="buttonRegistration">Регистрация
-            </button>
+            <button type="submit" class="w-100 btn btn-lg btn-primary">Войти</button>
+            <a href="{{ route('registration') }}">
+                <button type="button" class="mt-2 w-100 btn btn-lg btn-primary">Регистрация</button>
+            </a>
             <p class="mt-5 mb-3 text-body-secondary">© 2022–2023</p>
         </form>
     </main>
